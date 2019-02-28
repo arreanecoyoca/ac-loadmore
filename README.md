@@ -24,7 +24,9 @@ $('#your-button').acLoadmore({ container: '#your-container' });
 3. add this in your html file
 ```
 <div id="your-container">
-// this is where the ajax response will run
+
+  // this is where the ajax response will run
+  
 </div>
 <button id="your-button">Read More</button> // the button that will trigger the ajax call
 ```

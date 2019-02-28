@@ -15,9 +15,25 @@ a quick way to create Load more ajax funtionality in your wordpress site
 ## After Activation
 1. In your functions.php add this code 
 ```
-acLoadmore('post')
+acLoadmore('post');
 ```
 2. add this script in your js or before the </body> tag
 ```
-$('.your-button').acLoadmore({ container: '#your-container' })
+$('#your-button').acLoadmore({ container: '#your-container' });
+```
+3. add this in your html file
+```
+<div id="your-container">
+// this is where the ajax response will run
+</div>
+<button id="your-button">Read More</button> // the button that will trigger the ajax call
+```
+4. Create a template file in your theme `ac-loadmore-<post_type>.php`
+in this example, since we are showing the post as the post type. Let's name our file as `ac-loadmore-post.php`
+```
+<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+
+<?php the_excerpt(); ?>
+
+<a href="<?php the_permalink(); ?>" class="btn btn-primary">Read More</a>
 ```

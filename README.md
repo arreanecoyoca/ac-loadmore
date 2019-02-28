@@ -66,7 +66,7 @@ in this example, since we are showing the post as the post type. Let's name our 
 ## $.acLoadmore Parameters
 | Parameter | Type | Default | Description |
 | ----------- | ----------- | ----------- | ----------- |
-| Container | string | none | the `id` or `class` of your container on where the ajax data will showy |
+| container | string | none | the `id` or `class` of your container on where the ajax data will showy |
 | wp_query | object | | an object containing the data for your wordpress query. see WP `Query table` below for more information |
 
 ### WP Query Object

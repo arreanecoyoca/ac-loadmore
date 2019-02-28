@@ -36,6 +36,20 @@ jQuery(function($){
 });
 </script>
 ```
+or
+```
+<script>
+jQuery(function($){
+  $('#your-button').acLoadmore({
+    container: '#your-container',
+    wp_query: {
+      post_type: 'post',
+      posts_per_page: 5
+    }
+  });
+});
+</script>
+```
 
 4. Create a template file in your theme `ac-loadmore-<post_type>.php`
 in this example, since we are showing the post as the post type. Let's name our file as `ac-loadmore-post.php`

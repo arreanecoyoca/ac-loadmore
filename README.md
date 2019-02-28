@@ -13,6 +13,11 @@ a quick way to create Load more ajax funtionality in your wordpress site
 3. Activate AC Loader plugin from your Plugins page
 
 ## After Activation
-1. In your functions.php add this code `acLoadmore('post')`
+1. In your functions.php add this code 
+```
+acLoadmore('post')
+```
 2. add this script in your js or before the </body> tag
-`$('.your-button').acLoadmore({ container: '#your-container' })
+```
+$('.your-button').acLoadmore({ container: '#your-container' })
+```

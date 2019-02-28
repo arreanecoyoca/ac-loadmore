@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: AC Loadmore
- * Plugin URI: 
+ * Plugin URI: https://github.com/arreanecoyoca/ac-loadmore
  * Description: a quick way to create Load more ajax funtionality in your wordpress site
  * Version: 1.0
  * Author: Arreane Coyoca

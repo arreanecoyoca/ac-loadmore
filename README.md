@@ -28,7 +28,7 @@ a quick way to create Load more ajax funtionality in your wordpress site
 <button id="your-button">Read More</button> // the button that will trigger the ajax call
 ```
 
-3. add this script in your js or before the </body> tag
+3. add this script in your js or before the `</body>` tag
 ```
 <script>
 jQuery(function($){

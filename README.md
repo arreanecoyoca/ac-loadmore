@@ -3,8 +3,8 @@ a quick way to create Load more ajax funtionality in your wordpress site
 
 ## Installation
 **Manually**
-1. Upload the wordpress-seo folder to the /wp-content/plugins/ directory
-2. Activate the Yoast SEO plugin through the ‘Plugins’ menu in WordPress
+1. Upload the ac-loader folder to the /wp-content/plugins/ directory
+2. Activate the Yoast AC Loader through the ‘Plugins’ menu in WordPress
 3. Go to “after activation” below
 
 **From within WordPress**
@@ -39,3 +39,9 @@ in this example, since we are showing the post as the post type. Let's name our 
 
 <a href="<?php the_permalink(); ?>" class="btn btn-primary">Read More</a>
 ```
+
+## $.acLoadmore Parameters
+| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text | 

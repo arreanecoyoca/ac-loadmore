@@ -12,7 +12,6 @@ a quick way to create Load more ajax funtionality in your wordpress site
 2. Visit "Plugins > Add New > Upload
 3. Activate AC Loader plugin from your Plugins page
 
----
 
 ## After Activation
 1. In your functions.php add this code 
@@ -48,13 +47,13 @@ in this example, since we are showing the post as the post type. Let's name our 
 
 ## $.acLoadmore Parameters
 | Parameter | Type | Default | Description |
-| ----------- | ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- |
 | Container | string | none | the `id` or `class` of your container on where the ajax data will showy |
 | wp_query | object | | an object containing the data for your wordpress query. see WP `Query table` below for more information |
 
 ### WP Query Object
 | Parameter | Type | Default | Description |
-| ----------- | ----------- | ----------- |
+| ----------- | ----------- | ----------- | ----------- |
 | post_type | string | post | the post type of your query |
 | posts_per_page | int | the value set in `Settings > Reading > Blog pages show at most` | the amount of posts to return |
 | per_page | int | 1 | the page pagination to start the query |

@@ -12,16 +12,14 @@ a quick way to create Load more ajax funtionality in your wordpress site
 2. Visit "Plugins > Add New > Upload
 3. Activate AC Loader plugin from your Plugins page
 
+---
+
 ## After Activation
 1. In your functions.php add this code 
 ```
 acLoadmore('post');
 ```
-2. add this script in your js or before the </body> tag
-```
-$('#your-button').acLoadmore({ container: '#your-container' });
-```
-3. add this in your html file
+2. add this in your html file
 ```
 <div id="your-container">
 
@@ -30,6 +28,12 @@ $('#your-button').acLoadmore({ container: '#your-container' });
 </div>
 <button id="your-button">Read More</button> // the button that will trigger the ajax call
 ```
+
+3. add this script in your js or before the </body> tag
+```
+$('#your-button').acLoadmore({ container: '#your-container' });
+```
+
 4. Create a template file in your theme `ac-loadmore-<post_type>.php`
 in this example, since we are showing the post as the post type. Let's name our file as `ac-loadmore-post.php`
 ```
@@ -39,6 +43,8 @@ in this example, since we are showing the post as the post type. Let's name our 
 
 <a href="<?php the_permalink(); ?>" class="btn btn-primary">Read More</a>
 ```
+
+---
 
 ## $.acLoadmore Parameters
 | Parameter | Type | Default | Description |
@@ -51,7 +57,7 @@ in this example, since we are showing the post as the post type. Let's name our 
 | ----------- | ----------- | ----------- |
 | post_type | string | post | the post type of your query |
 | posts_per_page | int | the value set in `Settings > Reading > Blog pages show at most` | the amount of posts to return |
-| per_page | int | the page pagination to start the query |
+| per_page | int | 1 | the page pagination to start the query |
 
 See https://v2.wp-api.org/reference/posts/ for more wp_query options
 

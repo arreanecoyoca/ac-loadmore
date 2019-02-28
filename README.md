@@ -41,7 +41,17 @@ in this example, since we are showing the post as the post type. Let's name our 
 ```
 
 ## $.acLoadmore Parameters
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text | 
+| Parameter | Type | Default | Description |
+| ----------- | ----------- | ----------- |
+| Container | string | none | the `id` or `class` of your container on where the ajax data will showy |
+| wp_query | object | | an object containing the data for your wordpress query. see WP `Query table` below for more information |
+
+### WP Query Object
+| Parameter | Type | Default | Description |
+| ----------- | ----------- | ----------- |
+| post_type | string | post | the post type of your query |
+| posts_per_page | int | the value set in `Settings > Reading > Blog pages show at most` | the amount of posts to return |
+| per_page | int | the page pagination to start the query |
+
+See https://v2.wp-api.org/reference/posts/ for more wp_query options
+

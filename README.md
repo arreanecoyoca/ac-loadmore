@@ -4,7 +4,7 @@ a quick way to create Load more ajax funtionality in your wordpress site
 ## Installation
 **Manually**
 1. Upload the ac-loader folder to the /wp-content/plugins/ directory
-2. Activate the Yoast AC Loader through the ‘Plugins’ menu in WordPress
+2. Activate the AC Loader through the ‘Plugins’ menu in WordPress
 3. Go to “after activation” below
 
 **From within WordPress**

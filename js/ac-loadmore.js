@@ -3,7 +3,6 @@
 $.fn.acLoadmore = function(params) {
     var config = {
         container: '',
-        noShow: '<div class="alert alert-warning">all data have been displayed</div>',
         wp_query: {
             page: 1,
             post_type: 'post',
@@ -25,6 +24,7 @@ $.fn.acLoadmore = function(params) {
     $button.click(function(e){
         e.preventDefault();
         
+        $container.addClass('loading');
         $button.addClass('loading');
 
         $.ajax({
@@ -34,28 +34,25 @@ $.fn.acLoadmore = function(params) {
                 xhr.setRequestHeader( 'X-WP-Nonce', wpApiSettings.nonce );
             },
             data: config.wp_query,
-        }).done(function(response){
+        }).done(function(response, textStatus, request) {
 
-            $.each(response, function(index, item){
-                if(typeof(item.tmp)=='undefined') {
-                    var msg = "Error: Ajax Enpoint not registered";
-                    msg += "\n\nadd this code in your functions.php";
-                    msg += "\nacLoadmore('"+item.type+"')";
-                    alert(msg);
-                    
-                    return;
-                }
+            $.each(response, function(index, item) {
                 $container.append(item.tmp);
             });
+
+            var totalPages = request.getResponseHeader('X-WP-TotalPages');
+
+            if(config.wp_query.page>=parseInt(totalPages)) {
+                $button.hide();
+            }
 
         }).fail(function(response){
 
             console.log( response.responseJSON.message );
-            $container.append(config.noShow);
-            $button.hide();
 
         }).always(function(){
 
+            $container.removeClass('loading');
             $button.removeClass('loading');
             config.wp_query.page++;
 

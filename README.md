@@ -44,8 +44,8 @@ jQuery(function($){
   $('#your-button').acLoadmore({
     container: '#your-container',
     wp_query: {
-      post_type: 'post',
-      per_page: 5
+      post_type: 'post', // the post type you want to display
+      per_page: 5 // number of posts to retrieve
     }
   });
 });

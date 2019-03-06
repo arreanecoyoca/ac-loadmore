@@ -1,5 +1,9 @@
 # AC Loadmore
-a quick way to create Load more ajax funtionality in your wordpress site.
+A quick way to create Load more ajax funtionality in your wordpress site for your post, page, or any custom post types.
+
+- no php code needed!
+- just html and jquery is all you need!
+
 
 ## Installation
 **Manually**

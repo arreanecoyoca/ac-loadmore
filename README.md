@@ -1,24 +1,20 @@
 # AC Loadmore
-a quick way to create Load more ajax funtionality in your wordpress site
+a quick way to create Load more ajax funtionality in your wordpress site.
 
 ## Installation
 **Manually**
-1. Upload the ac-loader folder to the /wp-content/plugins/ directory
-2. Activate the AC Loader through the ‘Plugins’ menu in WordPress
-3. Go to “after activation” below
+1. Upload the ac-loader folder to the /wp-content/plugins/ directory.
+2. Activate the AC Loader through the ‘Plugins’ menu in WordPress.
+3. Go to “after activation” below.
 
 **From within WordPress**
-1. Download the plugin
-2. Visit "Plugins > Add New > Upload
-3. Activate AC Loader plugin from your Plugins page
+1. Download the plugin.
+2. Visit "Plugins > Add New > Upload.
+3. Activate AC Loader plugin from your Plugins page.
 
 
 ## After Activation
-1. In your functions.php add this code 
-```
-<?php acLoadmore('post'); ?>
-```
-2. add this in your html file
+1. Add this anywhere on your code where you want to display the file.
 ```
 <div id="your-container">
 
@@ -28,7 +24,7 @@ a quick way to create Load more ajax funtionality in your wordpress site
 <button id="your-button">Read More</button> // the button that will trigger the ajax call
 ```
 
-3. add this script in your js or before the `</body>` tag
+2. Add this script in your js or anywhere before the `</body>` tag.
 ```
 <script>
 jQuery(function($){
@@ -36,7 +32,8 @@ jQuery(function($){
 });
 </script>
 ```
-or
+or use the code below if you need to query custom post types with extra arguments.
+See here https://v2.wp-api.org/reference/posts/ for more wp_query options.
 ```
 <script>
 jQuery(function($){
@@ -44,15 +41,15 @@ jQuery(function($){
     container: '#your-container',
     wp_query: {
       post_type: 'post',
-      posts_per_page: 5
+      per_page: 5
     }
   });
 });
 </script>
 ```
 
-4. Create a template file in your theme `ac-loadmore-<post_type>.php`
-in this example, since we are showing the post as the post type. Let's name our file as `ac-loadmore-post.php`
+3. Create a template file in your theme `ac-loadmore-<post_type>.php`.
+In this example, since we are showing the post as the post type. Let's name our file as `ac-loadmore-post.php`.
 ```
 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
@@ -73,8 +70,8 @@ in this example, since we are showing the post as the post type. Let's name our 
 | Parameter | Type | Default | Description |
 | ----------- | ----------- | ----------- | ----------- |
 | post_type | string | post | the post type of your query |
-| posts_per_page | int | the value set in `Settings > Reading > Blog pages show at most` | the amount of posts to return |
-| per_page | int | 1 | the page pagination to start the query |
+| per_page | int | the value set in `Settings > Reading > Blog pages show at most` | the amount of posts to return |
+| page | int | 1 | the page pagination to start the query |
 
 See https://v2.wp-api.org/reference/posts/ for more wp_query options
 

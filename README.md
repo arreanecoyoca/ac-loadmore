@@ -4,13 +4,13 @@ a quick way to create Load more ajax funtionality in your wordpress site.
 ## Installation
 **Manually**
 1. Upload the ac-loader folder to the /wp-content/plugins/ directory.
-2. Activate the AC Loader through the ‘Plugins’ menu in WordPress.
-3. Go to “after activation” below.
+2. Activate AC Loader plugin from your Plugins page.
 
 **From within WordPress**
 1. Download the plugin.
 2. Visit "Plugins > Add New > Upload.
-3. Activate AC Loader plugin from your Plugins page.
+3. Upload the .zip file and click `install now`.
+4. Activate AC Loader plugin from your Plugins page.
 
 
 ## After Activation

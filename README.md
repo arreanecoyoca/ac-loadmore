@@ -72,9 +72,9 @@ In this example, since we are showing the post as the post type. Let's name our 
 | ----------- | ----------- | ----------- | ----------- |
 | container | string | none | the `id` or `class` of your container on where the ajax data will showy |
 | wp_query | object | | an object containing the data for your wordpress query. see WP `Query table` below for more information |
-| done | function | none | Event gets triggered after ajax call is successful |
-| fail | function | none | Event gets triggered when ajax call fails |
-| done | function | none | Event gets triggered everytime after ajax call |
+| done | function | none | function gets triggered after ajax call is successful |
+| fail | function | none | function gets triggered when ajax call fails |
+| always | function | none | function gets triggered everytime after ajax call |
 
 ### WP Query Object
 | Parameter | Type | Default | Description |

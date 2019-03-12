@@ -7,6 +7,9 @@ $.fn.acLoadmore = function(params) {
             page: 1,
             post_type: 'post',
         },
+        done: function(){},
+        fail: function(){},
+        always: function(){},
     };
 
     config = $.extend(true, config, params);
@@ -47,15 +50,21 @@ $.fn.acLoadmore = function(params) {
                 $button.hide();
             }
 
+            config.done();
+
         }).fail(function(response){
 
             console.log( response.responseJSON.message );
+
+            config.fail();
 
         }).always(function(){
 
             $container.removeClass('loading');
             $button.removeClass('loading');
             config.wp_query.page++;
+
+            config.always();
 
         });
 

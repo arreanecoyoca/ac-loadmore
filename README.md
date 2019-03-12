@@ -45,7 +45,10 @@ jQuery(function($){
     container: '#your-container',
     wp_query: {
       post_type: 'post', // the post type you want to display
-      per_page: 5 // number of posts to retrieve
+      per_page: 5 // number of posts to retrieve,
+      done: function(){ alert('ajax success'); },
+      fail: function(){ alert('ajax failed'); },
+      always: function(){ alert('ajax done'); }
     }
   });
 });
@@ -69,6 +72,9 @@ In this example, since we are showing the post as the post type. Let's name our 
 | ----------- | ----------- | ----------- | ----------- |
 | container | string | none | the `id` or `class` of your container on where the ajax data will showy |
 | wp_query | object | | an object containing the data for your wordpress query. see WP `Query table` below for more information |
+| done | function | none | Event gets triggered after ajax call is successful |
+| fail | function | none | Event gets triggered when ajax call fails |
+| done | function | none | Event gets triggered everytime after ajax call |
 
 ### WP Query Object
 | Parameter | Type | Default | Description |

@@ -30,6 +30,7 @@ $.fn.acLoadmore = function(params) {
         $.ajax({
             url: endpoint,
             method: 'GET',
+            dataType: 'json',
             beforeSend: function(xhr){
                 xhr.setRequestHeader( 'X-WP-Nonce', wpApiSettings.nonce );
             },

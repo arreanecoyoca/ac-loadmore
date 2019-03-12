@@ -1,4 +1,4 @@
-    <?php
+<?php
 /**
  * Plugin Name: AC Loadmore
  * Plugin URI: https://github.com/arreanecoyoca/ac-loadmore

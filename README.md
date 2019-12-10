@@ -45,10 +45,10 @@ jQuery(function($){
     container: '#your-container',
     wp_query: {
       post_type: 'post', // the post type you want to display
-      per_page: 5 // number of posts to retrieve,
-      done: function(){ alert('ajax success'); },
-      fail: function(){ alert('ajax failed'); },
-      always: function(){ alert('ajax done'); }
+      per_page: 5, // number of posts to retrieve,
+      done: function(){ console.log('ajax success'); },
+      fail: function(){ console.log('ajax failed'); },
+      always: function(){ console.log('ajax done'); }
     }
   });
 });
